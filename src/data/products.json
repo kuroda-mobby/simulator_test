@@ -1,0 +1,98 @@
+[
+  {
+    "name": "テスト1",
+    "category1": true,
+    "category2": false,
+    "category3": false,
+    "new": "ture",
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト2",
+    "category1": true,
+    "category2": false,
+    "category3": true,
+    "new": false,
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト3",
+    "category1": true,
+    "category2": true,
+    "category3": false,
+    "new": false,
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト4",
+    "category1": true,
+    "category2": true,
+    "category3": false,
+    "new": false,
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト5",
+    "category1": true,
+    "category2": false,
+    "category3": true,
+    "new": false,
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト6",
+    "category1": false,
+    "category2": true,
+    "category3": false,
+    "new": false,
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト7",
+    "category1": false,
+    "category2": false,
+    "category3": true,
+    "new": false,
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト8",
+    "category1": true,
+    "category2": true,
+    "category3": false,
+    "new": false,
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト9",
+    "category1": true,
+    "category2": false,
+    "category3": true,
+    "new": false,
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト10",
+    "category1": false,
+    "category2": true,
+    "category3": true,
+    "new": "ture",
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト11",
+    "category1": true,
+    "category2": true,
+    "category3": false,
+    "new": "ture",
+    "imagePath": "https://placehold.jp/300x200.png"
+  },
+  {
+    "name": "テスト12",
+    "category1": true,
+    "category2": false,
+    "category3": true,
+    "new": "ture",
+    "imagePath": "https://placehold.jp/300x200.png"
+  }
+]

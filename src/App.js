@@ -1,6 +1,9 @@
 import './App.css';
+import {Products} from './Products'
 import styled from "styled-components";
 import { useState } from 'react';
+import products_data from "./data/products.json";
+
 
 function App() {
   console.log(window.location.href);
@@ -22,104 +25,10 @@ function App() {
         <CLi id="category3" className="category_li">{jp ? <span className="jp">カテゴリー3</span> : <span className="en">Category3</span>}</CLi>
         <CLi id="allproducts" className="category_li">{jp ? <span className="jp">全て</span> : <span className="en">All</span>}</CLi>
       </CCUl>
-      <CPUl>
-        <CPLi className="category1 category2">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト1</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1 category2">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト2</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト3</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1 category2">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト4</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1 category2">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト5</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1 category2">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト6</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category2 category3">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト7</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1 category3">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト8</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1 category2">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト9</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1 new">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト10</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category2 new">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト11</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category3 new">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト12</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1 category2 new">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト13</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category2 new">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト14</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category2 category3 new">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト15</CPName>
-          </CPA>
-        </CPLi>
-        <CPLi className="category1 category3 new">
-          <CPA>
-            <CPImg src="https://placehold.jp/300x200.png" />
-            <CPName>テスト16</CPName>
-          </CPA>
-        </CPLi>
-      </CPUl>
+
+      <Products products_data={products_data} />
+
+      
     </div>
   );
 }
@@ -141,29 +50,5 @@ const CLi = styled.li`
   color: #767676;
   font-size: 170%;
 `;
-const CPUl = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
-`;
-const CPLi = styled.li`
-  width: 25%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  box-sizing: border-box;
-  margin-bottom: 1rem;
-`;
-const CPA = styled.a`
-  display: block;
-  position: relative
-`;
-const CPImg = styled.img`
-  width: 100%;
-`;
-const CPName = styled.span`
-  display: block;
-  position: absolute;
-  bottom: 0;
-`;
+
 export default App;
