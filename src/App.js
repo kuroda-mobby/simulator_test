@@ -2,16 +2,22 @@ import './App.css';
 import {Products} from './Products'
 import styled from "styled-components";
 import { useState } from 'react';
-import products_data from "./data/products.json";
+import productsData from "./data/products.json";
 
 
 function App() {
-  console.log(window.location.href);
+  //console.log(window.location.href);
   const [jp, setJp] = useState(true);
   const onClickLunguage = () => {
     setJp(!(jp));
-    console.log(jp);
+    //console.log(jp);
   };
+
+  const [category, setCategory] = useState("all");
+  //console.log(category);
+  const onClickCategory = (categoryKey) => {
+    setCategory(categoryKey);
+  }
   return (
     <div className="App">
       
@@ -19,14 +25,14 @@ function App() {
         {jp ? 'English' : '日本語'}
       </CLanguage>
       <CCUl className="category__ul">
-        <CLi id="new" className="category_li">{jp ? <span className="jp">新商品</span> : <span className="en">NEW</span>}</CLi>
-        <CLi id="category1" className="category_li">{jp ? <span className="jp">カテゴリー1</span> : <span className="en">Category1</span>}</CLi>
-        <CLi id="category2" className="category_li">{jp ? <span className="jp">カテゴリー2</span> : <span className="en">Category2</span>}</CLi>
-        <CLi id="category3" className="category_li">{jp ? <span className="jp">カテゴリー3</span> : <span className="en">Category3</span>}</CLi>
-        <CLi id="allproducts" className="category_li">{jp ? <span className="jp">全て</span> : <span className="en">All</span>}</CLi>
+        <CLi id="new" className="category_li" onClick={() => onClickCategory("new")}>{jp ? <span className="jp">新商品</span> : <span className="en">NEW</span>}</CLi>
+        <CLi id="category1" className="category_li" onClick={() => onClickCategory("category1")}>{jp ? <span className="jp">カテゴリー1</span> : <span className="en">Category1</span>}</CLi>
+        <CLi id="category2" className="category_li" onClick={() => onClickCategory("category2")}>{jp ? <span className="jp">カテゴリー2</span> : <span className="en">Category2</span>}</CLi>
+        <CLi id="category3" className="category_li" onClick={() => onClickCategory("category3")}>{jp ? <span className="jp">カテゴリー3</span> : <span className="en">Category3</span>}</CLi>
+        <CLi id="allproducts" className="category_li" onClick={() => onClickCategory("all")}>{jp ? <span className="jp">全て</span> : <span className="en">All</span>}</CLi>
       </CCUl>
 
-      <Products products_data={products_data} />
+      <Products productsData={productsData} currentCategory={category} />
 
       
     </div>
@@ -49,6 +55,9 @@ const CLi = styled.li`
   margin: calc(2rem - 0.14285714em) 0 1rem;
   color: #767676;
   font-size: 170%;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export default App;

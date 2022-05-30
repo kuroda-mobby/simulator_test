@@ -2,11 +2,22 @@ import React from "react";
 import styled from "styled-components";
 
 export const Products = (props) => {
-  const {products_data} = props;
+  const {productsData, currentCategory} = props;
+  console.log(currentCategory);
   return(
     <>
       <CPUl>
-      {products_data.map((item, index) => {
+      
+      {productsData.map((item, index) => {
+        if (currentCategory === "new" && item.new === false) {
+          return false;
+        } else if (currentCategory === "category1" && item.category1 === false) {
+          return false;
+        } else if (currentCategory === "category2" && item.category2 === false) {
+          return false;
+        } else if (currentCategory === "category3" && item.category3 === false) {
+          return false;
+        }
         return(
           
           <CPLi className={"products_li " + (item.new ? "new " : "") + (item.category1 ? "category1 " : "") + (item.category2 ? "category2 " : "") + (item.category3 ? "category3" : "")} key={index}>
